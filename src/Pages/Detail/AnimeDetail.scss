@@ -1,0 +1,158 @@
+@import "../../variable.scss";
+
+
+.detail {
+  // padding: 5% 10%;
+  .left-container {
+    .detail-container {
+      
+      .wrapper {
+        padding: 3% 5%;
+        position: relative;
+
+        @media screen and (max-width:800px) {
+          padding: 3% 2% !important;
+        }
+        
+
+        
+        .card {
+          position: relative;
+          z-index: 2;
+          background-color: $secondaryWhite;
+          // box-shadow: rgb(196, 217, 235) 3px 3px 6px 0px inset,
+          //   rgba(236, 231, 231, 0.747) -3px -3px 6px 1px inset;
+          // box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+         
+          border-radius: 20px;
+          display: flex;
+          padding: 2% 5%;
+          //    margin: 4rem 0;
+
+          .image-container {
+            .image {
+              height: 320px;
+              // padding: 1px;
+              border-radius: 12px;
+              box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 0px 2px, rgba(255, 255, 255, 0.089) 0px 4px 6px -1px, rgba(255, 255, 255, 0.83) 0px 1px 0px inset;
+              img {
+                // width: 100%;
+                
+  
+                height: 100% !important;
+                border-radius: 12px;
+              }
+            }
+            
+          }
+          .information {
+            // line-height: 25px;
+            padding: 0% 3%;
+            color: $secondaryWhite;
+            
+            h1 {
+                font-weight: 500;
+
+            }
+
+            p {
+              font-size: 13px;
+              margin: 0.5rem 0;
+              span {
+                color: rgb(86, 250, 36);
+              }
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            background: linear-gradient(to right, #000000, #313030);
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            border-radius: 20px;
+            z-index: -2;
+          }
+        }
+       
+      }
+      
+    }
+  }
+}
+.watch-btn {
+    display: grid;
+    place-content: center;
+    margin-top: 1rem;
+    
+    
+    .button {
+      cursor: pointer;
+      padding: 0.6rem 1.8rem;
+      border: none;
+      outline: none;
+      background-color: $primaryColor;
+      border-radius: 5px;
+      a {
+        text-decoration: none;
+        h2 {
+          font-size: 18px;
+          font-weight: 500;
+          color: $secondaryWhite !important;
+        }
+      }
+    }
+
+   
+  }
+
+  
+@media screen and (max-width:800px) {
+    .card {
+        display: block !important;
+        .responsive {
+            display: none;
+        }
+
+        .information {
+            .hidden-img {
+                
+
+                    width: 150px;
+                    height: 220px;
+                    border-radius: 8px;
+                    box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 0px 1px, rgba(255, 255, 255, 0.089) 0px 4px 6px -1px, rgba(255, 255, 255, 0.83) 0px 1px 0px inset;
+                
+            }
+            h1 {
+                font-size: 22px;
+                margin: 1rem 0;
+                line-height: 25px;
+            }
+            .hidden-btn {
+                place-content: start;
+                margin-bottom: 1rem;
+                .button {
+                   width: 160px !important; 
+                }
+                
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width:800px) {
+
+    .card {
+        .information {
+            .hidden-img,.hidden-btn {
+                display: none;
+            }
+        }
+    }
+
+}

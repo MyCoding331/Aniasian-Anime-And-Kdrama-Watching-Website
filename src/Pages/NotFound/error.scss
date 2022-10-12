@@ -1,0 +1,57 @@
+
+@import "../../variable.scss";
+
+ 
+
+
+.error-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	
+
+	.bold-text {
+		margin-top: 3rem ;
+		h1 {
+			font-size: 155px !important;
+			font-weight: 500;
+			color: $secondaryGray;
+
+			span {
+				color: $primaryColor;
+			}
+		}
+	}
+	.notice-section {
+		margin: 2rem 0;
+		h3 {
+			text-align: center;
+			font-weight: 500;
+			font-size: 22px;
+			color: $secondaryGray;
+		}
+	}
+	.error-btn {
+		margin-bottom: 3rem ;
+		margin-top: 1rem;
+		
+		a {
+			button {
+				cursor: pointer;
+				border: none;
+				outline: none;
+				background-color: $primaryColor;
+				padding:1rem 1.5rem;
+				border-radius: 5px;
+				h4 {
+					font-weight: 500;
+					font-size: 18px;
+					color: $secondaryWhite;
+				}
+			}
+		}
+	}
+}
+

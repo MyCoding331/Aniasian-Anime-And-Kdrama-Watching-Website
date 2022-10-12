@@ -1,0 +1,527 @@
+@import "../../variable.scss";
+nav {
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+.navbar {
+  height: 90px;
+  max-width: 100vw;
+  padding: 0% 5%;
+
+  .search-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      a {
+        text-decoration: none !important;
+        
+          img {
+            width: 150px;
+            height: 46px;
+          }
+        
+      }
+    }
+    .search {
+      // margin-left: 3rem;
+      float: right;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search-wrapper {
+      .search {
+        display: none;
+      }
+    }
+  }
+}
+.nav-links-wrapper {
+  position: sticky;
+  top: 0 ;
+  z-index: 10;
+}
+.nav-links {
+  background: $primary-nav-background;
+   align-items: center;
+  // padding-left: 4%;
+  height: 55px;
+   margin: auto;
+  //  width: 85vw;
+  //  border-radius: 5px;
+   
+   padding: 0% 3% !important;
+
+   li {
+    &:hover {
+      background: $primary-nav-back-hover;
+    }
+    a {
+      h3 {
+        color: $secondaryWhite ;
+      }
+    }
+   }
+
+  
+}
+.nav-links,
+.nav-mainlinks {
+  display: flex;
+  // background-color: $primary-nav-background;
+  // box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+  //   rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  text-align: center;
+  // align-items: center;
+  // padding-left: 4%;
+  // height: 70px;
+  transition: all 500ms ease-in-out;
+  // margin: auto;
+
+  // justify-content:  space-around;
+
+  @media screen and (max-width: 850px) {
+    display: none;
+  }
+
+  li {
+    list-style: none;
+    transition: all 500ms ease-in-out;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+    a {
+      text-decoration: none;
+      margin: 1.5rem 2rem;
+      height: 100%;
+      display: grid;
+      place-content: center;
+
+      h3 {
+        text-transform: uppercase;
+
+       
+        
+      
+        font-size: 17px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+// .main-top-nav {
+
+//   border-bottom: 1px solid $primaryColor;
+// }
+.nav-mainlinks {
+  li {
+    a {
+      margin: 1.5rem !important;
+      h3 {
+        color: $secondaryBlack;
+        &::after {
+          content: "";
+          display: block;
+          margin: auto;
+          height: 3px;
+          width: 0%;
+          background: $primaryColor;
+          transition: all 0.5s ease-in-out;
+          
+          border-radius: 50px;
+         
+    
+          @keyframes width {
+            0% {
+              width: 0%;
+            }
+            100% {
+              width: 100%;
+            }
+          }
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+            animation: width 500ms alternate ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active {
+  position: relative;
+  transition: all 500ms ease-in-out;
+  h3 {
+    // color: $secondaryBlack !important;
+    &::after {
+      content: "";
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 100%;
+      background: $secondaryBlack;
+      transition: all 0.5s ease-in-out;
+      animation: width 500ms alternate ease-in-out;
+      border-radius: 50px;
+      
+
+      @keyframes width {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.search-box {
+  @media screen and (max-width: 375px) {
+    height: 40px;
+    .search-input {
+      .btn {
+        height: 36px !important;
+        width: 36px !important;
+
+        svg {
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 850px) {
+    display: none;
+  }
+}
+.menu-btn {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .search-btn {
+    margin-right: 2rem;
+    cursor: pointer;
+    svg {
+      font-size: 25px;
+    }
+  }
+  .hamburger-btn {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      font-size: 30px !important;
+    }
+  }
+
+  @media screen and (min-width: 850px) {
+    display: none !important;
+  }
+}
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $primary-hamburger-menu;
+  z-index: 100;
+  height: 100vh;
+  width: 60vw;
+  overflow: hidden !important;
+
+  transition: all 500ms ease-in-out;
+  @media screen and (max-width: 600px) {
+    width: 70vw;
+  }
+  @media screen and (min-width: 850px) {
+    display: none;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+    // align-items: center;
+    justify-content: center;
+    margin: 1.8rem 0;
+    transition: all 500ms ease-in-out;
+    h3 {
+      color: $secondaryWhite;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+
+  .btn {
+    position: absolute !important;
+    top: 4%;
+    right: 10%;
+    transition: all 500ms ease-in-out;
+
+    .close {
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      svg {
+        font-size: 25px;
+        color: $secondaryWhite;
+      }
+    }
+  }
+}
+
+.shadow {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $secondaryBlack;
+  opacity: 0.6;
+  overflow: hidden;
+  transition: all 500ms 500ms ease-in-out;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+}
+.my-burger-enter {
+  opacity: 0;
+
+  animation: slide-in 600ms alternate ease-in-out;
+}
+.my-burger-exit {
+  opacity: 0.5;
+
+  animation: slide-out 400ms alternate ease-in-out;
+  animation-delay: 200ms;
+}
+.my-burger-enter-active {
+  opacity: 1;
+
+  transition: all 600ms ease-in-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-out {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.my-node-enter {
+  opacity: 0;
+  animation: drop 600ms alternate ease-in-out;
+}
+.my-node-exit {
+  animation: up 600ms alternate ease-in-out;
+  opacity: 1;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: all 600ms ease-in-out;
+}
+
+@keyframes up {
+  from {
+    height: 45px;
+    opacity: 1;
+  }
+  to {
+    height: 0px;
+    opacity: 0;
+  }
+}
+@keyframes drop {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 45px;
+    opacity: 1;
+  }
+}
+@keyframes down {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 41px;
+    opacity: 1;
+  }
+}
+.dropdown-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  button {
+    color: $secondaryWhite;
+    font-size: 25px;
+    font-weight: 500;
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+    background: transparent;
+    cursor: pointer;
+
+  }
+  .hidden {
+    display: none !important;
+  }
+  @media screen and (max-width: 850px) {
+    button {
+      font-size: 18px !important;
+
+      // width: 30vw !important;
+    }
+  }
+
+  .span {
+    display: flex;
+    // margin-left: -60px !important;
+
+    svg {
+      color: $secondaryWhite !important;
+      font-size: 22px;
+    }
+  }
+}
+.label {
+  margin: 1rem 0;
+  
+}
+.activ {
+  position: relative;
+  transition: all 500ms ease-in-out;
+  // left: 10px !important;
+  
+  button {
+    color: $secondaryWhite !important;
+    width: 70% !important;
+    border: none !important;
+    outline: none !important;
+    background: transparent;
+
+    cursor: pointer;
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      margin: auto;
+      height: 2px !important;
+      width: 90%;
+      background-color: $secondaryWhite;
+      transition: all 0.5s ease-in-out;
+      animation: width 500ms alternate ease-in-out;
+      border-radius: 3px;
+      position: absolute;
+      bottom: -3px;
+      // left: -5px;
+      z-index: -2;
+      @media screen and (max-width: 400px) {
+        width: 90%;
+      }
+      // animation: fade 2s alternate 600ms infinite ease-in-out;
+
+      @keyframes width {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 95%;
+        }
+      }
+    }
+  }
+  .span {
+    svg {
+      color: $secondaryWhite !important;
+    }
+  }
+}
+
+.setActive {
+  button {
+    color: $primaryColor !important;
+  }
+}
+
+.my-SubList-enter {
+  opacity: 0;
+  animation: hamDrop 1s alternate  ease-in-out;
+}
+.my-SubList-exit {
+  animation: hamUp 600ms alternate  ease-in-out;
+  
+}
+.my-SubList-enter-active {
+  opacity: 1;
+  transition: all 600ms ease-in-out;
+}
+
+@keyframes hamUp {
+  from {
+   
+    opacity: 1;
+  }
+  to {
+    
+    opacity: 0;
+  }
+}
+@keyframes hamDrop {
+  from {
+    
+    opacity: 0;
+  }
+  to {
+    
+    opacity: 1;
+  }
+}

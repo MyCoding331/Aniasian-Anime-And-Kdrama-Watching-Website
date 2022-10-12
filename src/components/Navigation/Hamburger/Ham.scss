@@ -1,0 +1,36 @@
+@import "../../../variable.scss";
+
+
+
+.asian-transition , .anime-transition {
+    .list {
+        .active {
+            position: relative;
+            transition: all 500ms ease-in-out;
+            h3 {
+              color: $primaryColor !important;
+              &::after {
+                content: "";
+                display: block;
+                margin: auto;
+                height: 3px;
+                width: 100%;
+                background: $primaryColor;
+                transition: all 0.5s ease-in-out;
+                animation: width 500ms alternate ease-in-out;
+                border-radius: 50px;
+               
+          
+                @keyframes width {
+                  0% {
+                    width: 0%;
+                  }
+                  100% {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+    }
+}

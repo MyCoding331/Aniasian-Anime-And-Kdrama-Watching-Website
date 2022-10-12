@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
+
+@import "../../variable.scss";
+.search-input {
+    display: flex;
+    
+   
+    justify-content: flex-start !important;
+    align-items: center;
+   
+   height: 45px;
+   width: 400px;
+   
+  
+    position: relative;
+   
+    // animation: drop 600ms alternate ease-in-out;
+    
+    
+    @media screen and (max-width: 850px) {
+      width: 85vw;
+      margin: auto;
+      .main {
+        width: 100% !important;
+      }
+
+
+      .btn {
+        height: 38px !important;
+      }
+    }
+    
+    .main {
+      display: flex;
+      border-radius: 5px !important;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      align-items: center;
+      margin-left: 12px;
+      width: 480px ;
+      input {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        margin: 0 !important;
+        color: $secondaryBlack;
+        font-size: 20px;
+        transition: 0.4s;
+        width: 100% !important;
+       
+        padding: 0 6px;
+
+        &::placeholder {
+          color: $secondaryGray;
+          font-size: 20px !important;
+          font-family: 'Reem Kufi Ink', sans-serif !important;
+        }
+      }
+    }
+    .btn {
+      
+      height: 40px ;
+      width: 45px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+     
+      color: $primaryColor !important;
+      display: flex;
+    position: absolute;
+      justify-content: center;
+      align-items: center;
+      right: 0px;
+      // animation: down 600ms alternate ease-in-out;
+      cursor: pointer;
+
+     
+      
+      a {
+        display: flex;
+        position: relative;
+          justify-content: center;
+          align-items: center;
+          
+        svg {
+          color: $primaryColor !important;
+          font-size: 25px;
+          // animation: down 600ms alternate ease-in-out;
+          
+          
+        }
+      }
+
+    }
+    
+  }
+  

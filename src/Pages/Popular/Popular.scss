@@ -1,0 +1,114 @@
+@import "../../variable.scss";
+
+.popular-drama {
+    padding: 2% 5%;
+  
+    @media screen and (max-width: 800px) {
+      margin-top: 1rem;
+    }
+  
+    .heading {
+      h1 {
+        font-size: 25px;
+        font-weight: 500;
+    
+        margin: 1rem 0;
+        span {
+          color: $primaryColor;
+        }
+      }
+    }
+    .popular-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      .card {
+        margin-bottom: 1rem;
+  
+        a {
+          text-decoration: none;
+          color: $secondaryBlack;
+          img {
+            width: 100%;
+            position: relative !important;
+            height: 250px;
+            border-radius: 6px;
+            object-fit: cover;
+          }
+  
+          .image-container {
+            height: 250px !important;
+            position: relative !important;
+            img {
+              width: 100%;
+  
+              height: 100% !important;
+              border-radius: 6px;
+              object-fit: cover;
+            }
+            &::after {
+              content: "";
+              background-color: $secondaryBlack;
+              width: 100%;
+              height: 100%;
+              opacity: 0.4;
+              position: absolute;
+              top: 0;
+              left: 0;
+              border-radius: 6px;
+              display: none;
+            }
+            .play-icon {
+              position: absolute;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 35px;
+              display: none;
+              color: $secondaryWhite;
+            }
+  
+            @media screen and (max-width: 325px) {
+              height: 200px !important;
+            }
+          }
+  
+          p {
+            font-size: 14px;
+  
+            margin-bottom: 1rem;
+            margin-left: 2px;
+          }
+          span {
+            color: $secondaryGray;
+            font-size: 13px;
+          }
+  
+          &:hover {
+            .image-container {
+              &::after {
+                display: block;
+              }
+              img {
+                filter: blur(1px);
+              }
+            }
+            .play-icon {
+              display: block;
+              z-index: 3;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 425px) {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+  
+        img {
+          height: 250px !important;
+        }
+      }
+    }
+  }
+  
