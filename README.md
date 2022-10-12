@@ -1,10 +1,20 @@
-# Getting Started with Create React App
+# Anisian
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://anisian.fun/)
 
-## Available Scripts
 
-In the project directory, you can run:
+
+
+An website for Watching Anime & Asian drama Onlinr For Free
+
+
+
+Demo : (https://anisian.fun/).
+
+## ScreenShot of Website
+
+![alt text](https://github.com/MyCoding331/Aniasian-Anime-And-Kdrama-Watching-Website/blob/main/webite.png?raw=true)
+
 
 ### `npm start`
 
